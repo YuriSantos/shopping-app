@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -22,6 +21,7 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { AuthService } from './auth/auth.service';
 import { AuthGuard } from './auth/auth-guard.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -43,7 +43,7 @@ import { AuthGuard } from './auth/auth-guard.service';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [ShoppingListService, RecipeService, DataStorageService, AuthService, AuthGuard],
